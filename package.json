@@ -1,5 +1,5 @@
 {
-  "name": "sports-betting-front",
+  "name": "react_typeScript_vite_tailwindcss_vitest_prettier_esLint_husky",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "prepare": "husky"
   },
   "husky": {
     "hooks": {

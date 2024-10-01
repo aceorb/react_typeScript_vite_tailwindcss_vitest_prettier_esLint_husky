@@ -1,22 +1,15 @@
-import {useState} from 'react'
-import './App.css'
+import './App.css';
+import Counter from './components/Counter.tsx';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <h1 className="text-3xl font-bold underline">
         React + TypeScript + Vite + TailwindCss + Vitest + Prettier + EsLint + Husky
       </h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
-
+      <Counter initCount={0} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -11,15 +11,10 @@
     "test": "vitest",
     "prepare": "husky"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
       "eslint --fix",
-      "vitest"
+      "vitest run ."
     ]
   },
   "dependencies": {

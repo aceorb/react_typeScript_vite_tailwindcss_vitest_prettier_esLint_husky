@@ -5,9 +5,7 @@ function Counter({ initCount }: { initCount: number }) {
   useEffect(() => {});
 
   return (
-    f
     <div className="card">
-      dfefef
       <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
     </div>
   );

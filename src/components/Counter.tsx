@@ -1,12 +1,17 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
-function Counter({ initCount }: { initCount: number }) {
-  const [count, setCount] = useState(initCount);
+import { increment, selectCount } from '../store/counterSlice.ts';
+import { useAppDispatch, useAppSelector } from '../hooks/storeHooks.ts';
+
+function Counter() {
+  const count = useAppSelector(selectCount);
+  const dispatch = useAppDispatch();
+
   useEffect(() => {});
 
   return (
     <div className="card">
-      <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
+      <button onClick={() => dispatch(increment())}>count is {count}</button>
     </div>
   );
 }
